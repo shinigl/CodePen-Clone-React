@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Result() {
+function Result(props) {
+    console.log(props);
     return (
         <div>
             <div className="bg-[#282c34] p-4 shadow mt-4 rounded-lg">
@@ -10,7 +11,7 @@ function Result() {
                 </h2>
                 <iframe
                     className="w-full h-60 border border-gray-700 rounded-md"
-                    srcDoc={''}
+                    srcDoc={props.srcCode}
                     title="output"
                     sandbox="allow-scripts"
                     width="100%"
