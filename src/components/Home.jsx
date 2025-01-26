@@ -1,8 +1,8 @@
 import Navbar from './NavBar';
 import CodeMirror from "@uiw/react-codemirror";
 import { html } from "@codemirror/lang-html";
-import { css } from "@codemirror/lang-css";
 import { javascript } from "@codemirror/lang-javascript";
+import { css } from "@codemirror/lang-css";
 import { useCallback, useState } from "react";
 import Result from './Result';
 
