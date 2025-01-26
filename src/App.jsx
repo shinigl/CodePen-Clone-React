@@ -5,9 +5,9 @@ function App() {
 
   return (
     <>
-
+      
     </>
   )
 }
 
-export default App
+export default App;
