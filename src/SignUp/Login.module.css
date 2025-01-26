@@ -1,0 +1,90 @@
+/* Login.module.css */
+
+/* Container to center the form */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background */
+    color: white; /* Light text for dark theme */
+  }
+  
+  /* Box for the login form */
+  .loginBox {
+    background-color: #1f1f1f; /* Darker box background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  /* Title of the login page */
+  .loginTitle {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #e0e0e0; /* Light grey text for the title */
+    margin-bottom: 20px;
+  }
+  
+  /* Shared button styles */
+  .loginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+  }
+  
+  /* Specific styles for Google button */
+  .googleButton {
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    border: 1px solid #4285F4; /* Border to match the button color */
+  }
+  
+  .googleButton:hover {
+    opacity: 0.9;
+    background-color: #357ae8; /* Darker shade of blue for hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  
+  /* Specific styles for GitHub button */
+  .githubButton {
+    background-color: #333; /* GitHub dark grey */
+    color: white;
+    border: 1px solid #333;
+  }
+  
+  .githubButton:hover {
+    opacity: 0.9;
+    background-color: #444; /* Slightly lighter grey for hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  
+  /* Footer text */
+  .loginFooter {
+    text-align: center;
+    font-size: 14px;
+    color: #888; /* Light grey for footer text */
+  }
+  
+  .loginFooter a {
+    color: #1a73e8; /* Blue links */
+    text-decoration: none;
+  }
+  
+  .loginFooter a:hover {
+    text-decoration: underline;
+  }
+  

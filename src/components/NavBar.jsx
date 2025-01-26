@@ -1,10 +1,11 @@
 import React from 'react'
 import logo from '../assets/codepenLogo.png'
-
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate()
     function onSignIn(){
-        
+        navigate('/login')
     }
     return (
         <div className="main bg-[#2f3640] py-4 px-6">
