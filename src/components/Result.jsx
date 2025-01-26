@@ -10,7 +10,7 @@ function Result(props) {
                     Result
                 </h2>
                 <iframe
-                    className="w-full h-60 border border-gray-700 rounded-md"
+                    className="w-full h-60 border bg-white border-gray-700 rounded-md"
                     srcDoc={props.srcCode}
                     title="output"
                     sandbox="allow-scripts"
