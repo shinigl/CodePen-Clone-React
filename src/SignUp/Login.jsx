@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGoogle, FaGithub } from 'react-icons/fa'; 
 import styles from './Login.module.css'; 
-import logo from '../assets/codePenLogo.png'
+import logo from '../assets/codepenLogo.png'
 import { signInWithPopup } from 'firebase/auth';
 import { googleAuthProvider,githubAuthProvider } from '../firebase';
 import { auth } from '../firebase';
