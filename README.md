@@ -1,6 +1,4 @@
-
 # CodePen Editor Clone
-
 
 This is a **CodePen Editor Clone** built using **React** and **Firebase**. The app allows users to sign up and log in using Google or GitHub, edit HTML, CSS, and JavaScript code in a real-time code editor, and preview the output instantly. It aims to replicate some of the core functionalities of the popular **CodePen** editor.
 
@@ -37,6 +35,12 @@ This is a **CodePen Editor Clone** built using **React** and **Firebase**. The a
    - User data such as the display name and profile photo is stored in **localStorage** so that the session persists even after page reloads.
    - The app also checks whether a user is logged in on load, and redirects them to the login page if they are not authenticated.
 
+### 8. **Chatbot Integration Using Gemini API**
+   - A **Chatbot** powered by the **Gemini API** is integrated to provide real-time coding assistance.
+   - Users can ask coding-related questions, and the bot will respond with helpful suggestions, coding tips, or troubleshooting advice.
+   - The chatbot uses **Axios** to fetch responses from the Gemini API, which processes the input and provides relevant suggestions.
+   - This feature enhances the user experience by offering a virtual assistant while coding, making it easier to get help instantly.
+
 ## Technologies Used
 
 - **React.js** – JavaScript library for building user interfaces.
@@ -45,5 +49,7 @@ This is a **CodePen Editor Clone** built using **React** and **Firebase**. The a
 - **React Router** – To handle navigation between the login page and the main editor page.
 - **TailwindCSS** – For utility-first CSS styling, making it easy to design responsive and modern UIs.
 - **React Icons** – To add icons, such as the copy icon used in the code editors.
+- **Gemini API** – For integrating AI-powered chatbot functionality.
+- **Axios** – For making HTTP requests to the Gemini API and handling responses.
 
 
