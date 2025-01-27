@@ -3,6 +3,7 @@ import Home from './components/Home'
 import {createBrowserRouter} from 'react-router-dom'
 import Login from './SignUp/Login'
 import { RouterProvider } from 'react-router-dom'
+import Chatbot from './components/Chatbot'
 
 function App() {
   
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path:'/login',
     element:<Login/>
+  },
+  {
+    path: '/ask-ai',
+    element : <Chatbot/>
   }
 ])
   return (
