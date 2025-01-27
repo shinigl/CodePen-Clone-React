@@ -1,10 +1,12 @@
+import React, { useCallback, useState } from "react";
 import Navbar from './NavBar';
 import CodeMirror from "@uiw/react-codemirror";
 import { html } from "@codemirror/lang-html";
 import { javascript } from "@codemirror/lang-javascript";
 import { css } from "@codemirror/lang-css";
-import { useCallback, useState } from "react";
+import { FaCopy } from 'react-icons/fa'; 
 import Result from './Result';
+
 
 function Home() {
   const [html_edit, setHtml_Edit] = useState('');
@@ -36,6 +38,18 @@ function Home() {
   </html>
   `;
 
+  // Function to copy code to clipboard
+  const copyToClipboard = async (code) => {
+    try {
+      await navigator.clipboard.writeText(code);
+     
+    } catch (error) {
+      console.error("Error copying code: ", error);
+      
+    }
+  };
+  
+
   return (
     <>
       <Navbar />
@@ -44,7 +58,7 @@ function Home() {
         {/* Editor */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           {/* HTML Editor */}
-          <div className="bg-[#282c34] p-4 rounded-lg shadow">
+          <div className="bg-[#282c34] p-4 rounded-lg shadow relative">
             <h2 className="text-lg font-semibold mb-2 text-white">HTML</h2>
             <CodeMirror
               className="text-xl border-gray-700 border"
@@ -54,10 +68,16 @@ function Home() {
               extensions={[html(true)]}
               onChange={onChangeHtml}
             />
+            <button
+              onClick={() => copyToClipboard(html_edit)}
+              className="absolute top-2 right-2 cursor-pointer text-white p-2 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-300"
+            >
+              <FaCopy />
+            </button>
           </div>
 
           {/* CSS Editor */}
-          <div className="bg-[#282c34] p-4 rounded-lg shadow">
+          <div className="bg-[#282c34] p-4 rounded-lg shadow relative">
             <h2 className="text-lg font-semibold mb-2 text-white">CSS</h2>
             <CodeMirror
               className="text-xl border-gray-700 border"
@@ -67,10 +87,16 @@ function Home() {
               extensions={[css(true)]}
               onChange={onChangeCss}
             />
+            <button
+              onClick={() => copyToClipboard(css_edit)}
+              className="absolute top-2 right-2 cursor-pointer text-white p-2 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-300"
+            >
+              <FaCopy />
+            </button>
           </div>
 
           {/* JavaScript Editor */}
-          <div className="bg-[#282c34] p-4 rounded-lg shadow">
+          <div className="bg-[#282c34] p-4 rounded-lg shadow relative">
             <h2 className="text-lg font-semibold mb-2 text-white">JavaScript</h2>
             <CodeMirror
               className="text-xl border-gray-700 border"
@@ -80,10 +106,17 @@ function Home() {
               extensions={[javascript(true)]}
               onChange={onChangeJavaScript}
             />
+            <button
+              onClick={() => copyToClipboard(js_edit)}
+              className="absolute top-2 right-2 cursor-pointer text-white p-2 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-300"
+            >
+              <FaCopy />
+            </button>
           </div>
         </div>
         <Result srcCode={srcCode} />
       </div>
+    
     </>
   );
 }

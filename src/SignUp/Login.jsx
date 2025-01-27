@@ -16,6 +16,8 @@ async function signInGoogle(){
   try{
     let res = await signInWithPopup(auth,googleAuthProvider);
     localStorage.setItem('name',res.user.displayName);
+    localStorage.setItem('photo',res.user.photoURL)
+    console.log(res);
     navigate('/');
   } catch(err){
     console.log('Error');
@@ -26,6 +28,8 @@ async function signInGithub(){
   try{
     let res = await signInWithPopup(auth,githubAuthProvider);
     localStorage.setItem('name',res.user.displayName);
+    localStorage.setItem('photo',res.user.photoURL)
+    console.log(res.user.photoURL);
     navigate('/')
   }catch(err){
     console.log('Error');

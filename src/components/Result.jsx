@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Result(props) {
-    console.log(props);
+    // console.log(props);
     return (
         <div>
             <div className="bg-[#282c34] p-4 shadow mt-4 rounded-lg">
