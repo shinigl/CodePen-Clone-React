@@ -42,8 +42,9 @@ function Home() {
   const copyToClipboard = async (code) => {
     try {
       await navigator.clipboard.writeText(code);
-     
-    } catch (error) {
+      alert('Code copied')
+      
+     } catch (error) {
       console.error("Error copying code: ", error);
       
     }
